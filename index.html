@@ -10,7 +10,6 @@
 </head>
 
 <body>
-<!--Premier point de rupture à 850px-->
 <!----------------------- Navigation -------------------------->
     <nav class="navbar navbar-light bg-light font-weight-bold px-5 py-0">
             <a id="nameNav" class="navbar-brand h1 mb-0 p-0" href="index.html">Thomas Audouit</a>
@@ -25,7 +24,7 @@
         <p class="pb-3 h1">Penser, c'est chercher des clairières dans une forêt</p>
         <!-- <p>Jules Renard</p> -->
         <a href="#anchor">
-            <button type="button" class="btn mt-5 font-weight-bold btn-outline-light">Explorer</button>
+            <button id="explore" type="button" class="btn mt-5 font-weight-bold btn-outline-light">Explorer</button>
         </a>
     </header>
 
@@ -35,10 +34,10 @@
 <!------------------------Partie intro------------------------->
     <div id="intro" class="container-fluid text-light font-weight-bold text-center">
         <div id="introFirstRow" class="row pr-3">
-            <div class="col">
+            <div class="col-md-6 col-12">
                 <img class="pictureThomas" src="assets/IMG/photo_moi.png" alt="Portrait photo de Thomas Audouit en couleur souriant sur un fond en brique rouge" title="Portrait Photo de Thomas Audouit">
             </div>
-            <div class="col">
+            <div class="col-md-6 col-12">
                 <p class="h1"></a>WEBDESIGNER GRAPHISTE</p>
                 <!-- <hr> -->
                 <p class="h1">_____________</p>
@@ -50,20 +49,20 @@
             </div>
         </div>
         <div id="introSecondRow" class="row justify-content-center align-items-center pr-3">
-            <div id="infoList" class="col mt-5 text-left">
+            <div id="infoList" class="col-md-6 col-12 text-center">
             <p class="text-center mb-0 h2">Thomas Audouit</p>
             <p class="text-center mb-4 h2">________</p>
-            <ul id="age" class="h5 list-unstyled">
+            <ul class="h5 pt-4 list-unstyled">
                 <li>22 ans</li>
                 <li>Vie à Lille</li>
                 <li>Made in France</li>
                 <li class="drivingLicence">Permis B véhiculé</li>
             </ul>
             </div>
-            <div class="col">
+            <div class="col-md-6 col-12">
                 <ul id="skill" class="text-left h4 ">
-                    <li class="pb-4">Conception et refonte de sites web</li>
-                    <li class="pb-4">Manipulation des médias sociaux</li>
+                    <li>Conception et refonte de sites web</li>
+                    <li>Manipulation des médias sociaux</li>
                     <li>Création de contenus graphiques et audiovisuels</li>
                 </ul>
             </div>
@@ -79,78 +78,80 @@
             </div>
         </div>
         <div class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-4">
+            <div class="row">
+                <div class="col-md-4 col-6">
                     <p class="h3">Adobe Photoshop</p>
                     <div class="progressBar" role="progressbar">
-                        <div class="progress" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progressGood" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4 col-6">
                     <p class="h3">Adobe Indesign</p>
                         <div class="progressBar" role="progressbar">
-                            <div class="progress" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progressBof" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4 col-12">
                     <p class="h3">Adobe Illustrator</p>
                     <div class="progressBar" role="progressbar">
-                            <div class="progress" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progressBof" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                            </div>
                     </div>
                 </div>
             </div>
-            <div class="row mt-5">
-                <div class="col-4">
+            <div class="row">
+                <div class="col-md-4 col-6">
                     <p class="h3">Adobe Lightroom</p>
                     <div class="progressBar" role="progressbar">
-                        <div class="progress" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progressBof" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4 col-6">
                     <p class="h3">Adobe Premiere Pro</p>
                     <div class="progressBar" role="progressbar">
-                        <div class="progress" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4 col-12">
                     <p class="h3">Adobe After Effects</p>
                     <div class="progressBar" role="progressbar">
-                        <div class="progress" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
             </div>
-            <div class="row mt-5">
-                <div class="col-4">
+            <div class="row">
+                <div class="col-md-4 col-6">
                     <p class="h3">HTML5</p>
                     <div class="progressBar" role="progressbar">
-                        <div class="progress" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progressGood" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4 col-6">
                     <p class="h3">Adobe XD</p>
                     <div class="progressBar" role="progressbar">
-                        <div class="progress" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progressGood" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4 col-12">
                     <p class="h3">CSS3</p>
                     <div class="progressBar" role="progressbar">
-                        <div class="progress" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progressGood" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
             </div>
+        </div>
     </div>
 
 
 <!----------------------Partie Réalisations---------------------->
-    <div id="slidePart" class="container-fluid text-light font-weight-bold text-center">
+    <!-- <div id="slidePart" class="container-fluid text-light font-weight-bold text-center">
         <div class="row">
-          <div class="col h2 mb-5">
+          <div class="col h2">
             <p>Quelques réalisations</p>
             <p>___________</p>
           </div>
         </div>
-        <div id="slidePorfolio" class="row">
+        <div class="row">
             <div class="col">
                 <div class="carousel slide carousel-fade" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -187,27 +188,25 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 <!----------------------------Footer----------------------------->
-    <footer class="container-fluid text-black font-weight-bold">
+    <footer class="container-fluid text-dark font-weight-bold">
         <div class="row">
-            <div id="linkFooter" class="col-4 text-left">
-                <p><a href="#">Mentions légales</a></p>
-                <p><a href="#">Conditions générales d'utilisation</a></p>
-                <p><a href="#">Infos pratiques</a></p>
-                <p><a href="file:///C:/Users/thoma/OneDrive/Documents/Pro/LA%20MANU/CV_num/05_CONTACTS/index.html">Contact</a></p>
+            <div class="col-md-6 text-md-left col-12 text-center">
+                <p>Mentions légales</br>
+                Conditions générales d'utilisations</p>
+                <img class="iconSocialMedia" src="assets/img/linkedin.png" alt="icône linkedin" title="Linkedin">
+                <img class="iconSocialMedia" src="assets/img/github.png" alt="icône Github" title="Github">
+                <img class="iconSocialMedia" src="assets/img/gmail.png" alt="icône Gmail" title="Gmail">
             </div>
-            <div class="offset-4 col-4 text-right d-flex">
-                <p>Pour suivre mes futurs projets :</p>
-                <div>
-                    <a href="#"><img class="logo" src="assets/IMG/gmail.png" alt="Logo de Gmail" title="Logo de Gmail"></a>
-                    <a href="#"><img class="logo" src="assets/IMG/github.png" alt="Logo de Github" title="Logo de Github"></a>
-                    <a href="#"><img class="logo" src="assets/IMG/linkedin.png" alt="Logo de Linkedin" title="Logo de Linkedin"></a>
-                </div>
+            <div class="col-md-6 text-md-left d-flex justify-content-md-end col-12 text-center d-flex justify-content-center">
+                <p>154 rue Roger Salengro </br> 59110 La Madeleine
+                </br> Tél: 06.01.47.02.84
             </div>
         </div>
     </footer>
+
 
 <!-------------------Les liens Bootstrap---------------------->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
