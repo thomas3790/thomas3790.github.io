@@ -26,6 +26,15 @@ body {
     color: #cccccc;
 }
 
+footer {
+    margin-top: 10em;
+    background-color: #EAEAEA;
+  }
+  
+  .iconSocialMedia {
+    width: 3em;
+    height: 3em;
+  }
 
 
 

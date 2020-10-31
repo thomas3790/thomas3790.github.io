@@ -3,6 +3,10 @@ body {
     font-family: Gotham, Metropolis, Futura, iCiel, sans-serif;
 }
 
+p, h1, h2, h3, h4, h5, h6, hr {
+    text-shadow: 0.1em 0.1em 0.2em #000000;
+}
+
 #nameNav {
     font-size: 1.6em;
 }
@@ -19,8 +23,23 @@ header {
     color: #ffffffee;
     font-size: 1.6em;
     box-shadow: 0em 0.3em 0.7em #000000;
-    text-shadow: 0.1em 0.1em 0.2em #000000;
-    margin-bottom: 3em;
+    margin-bottom: 5em;
+}
+
+.hr1 {
+    border: 2px solid;
+    background-color: #ffffff;
+    width: 60%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.hr2 {
+    border: 2px solid;
+    background-color: #ffffff;
+    width: 5em;
+    margin-top: 1.5em;
+
 }
 
 #explore {
@@ -29,24 +48,9 @@ header {
     box-shadow: 0em 0em 0.5em #ffffff;
 }
 
-#intro {
-    align-items: center;
-    margin-top: 8em;
-    padding-right: 8em;
-    text-shadow: 0.1em 0.1em 0.2em #000000;
-}
-
 .pictureThomas {
-    width: 17em;
-    height: 17em;
-}
-
-#introFirstRow {
-    align-items: center;
-}
-
-#introSecondRow, p {
-    margin-bottom: 0;
+    width: 18em;
+    height: 18em;
 }
 
 #gaugePart {
@@ -103,15 +107,6 @@ float: left;
     height: 25px;
 } */
 
-#slidePart {
-    margin-top: 13em;
-    text-shadow: 0.1em 0.1em 0.2em #000000;
-}
-
-#carousel {
-    width: 50%;
-    height: 15px;
-}
 
 footer {
     margin-top: 10em;
@@ -123,22 +118,12 @@ footer {
     height: 3em;
 }
 
-.drivingLicence {
-    padding-top: 2em;
+#carouselPortfolio {
+    width: 70vw;
 }
 
-#skill {
-    padding-top: 5.5em;
-    padding-left: 2em;
-}
 
-#skill > li {
-    padding-bottom: 1em;
-}
 
-#aboutMe {
-    padding-top: 4em;
-}
 
 
 
