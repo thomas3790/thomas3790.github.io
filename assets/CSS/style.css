@@ -1,14 +1,65 @@
+/*Partie Accueil*/
+nav {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /*La propriété CSS box-sizing définit la façon dont la hauteur et la largeur totale d'un élément est calculée. border-box prend en compte les padding contrairement au content-box.*/
+    display: flex; /* Les liens seront disposés à l'horizontal */
+    justify-content: space-around;
+    align-items: center;
+    min-height: 7vh; /* A vérifier, ma hauteur ne pourra pas baisser en dessous de 8vh */
+    background-color: #ffffff;
+    position: relative; /*Pour faire fonctionner le z-index*/
+    z-index: 10; /*Pour faire passer au premier plan mon menu déroulant*/
+}
+
+.logo a {
+    color: #000000;
+    text-transform: uppercase; /* TOUT EN LETTRE BATON */
+    letter-spacing: 3px;
+    font-size: 18px; /* Voir pourquoi je ne parviens pas à changer la taille de police */
+    text-decoration: none;
+}
+.nav-links li {
+    list-style-type: none;
+}
+.nav-links li a {
+    color: #000000;
+    text-decoration: none;
+}
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 60%; /* Pour trouver la bonne largeur, appliquer d'abord un justify-content et un background-color pour estimer la largeur du bloc ul */
+    color: #eeeeee;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.burger {
+    display: none; /* J'ai préféré commencer à réaliser le .burger div {} ci-dessous avant afin de voir et maitriser le rendu de ce dernier. Je suis ensuite passé à cette étape pour gérer ensuite le responsive en mettant mon premier media screen. */
+    cursor: pointer; /* Le curseur se transforme en en main comme sur un lien désormais */
+}
+
+.burger div{ /* Cibler uniquement burger n'est pas utile vu que l'on ne le voit pas. */
+    width: 25px;
+    height: 3px;
+    background-color: #000000;   
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
 body {
     background-color: #1C323A;
     font-family: Gotham, Metropolis, Futura, iCiel, sans-serif;
 }
 
-p, h1, h2, h3, h4, h5, h6, hr {
+/* p, h1, h2, h3, h4, h5, h6, hr {
     text-shadow: 0.1em 0.1em 0.2em #000000;
-}
+} */
 
-#nameNav {
-    font-size: 1.6em;
+h1 {
+    font-size: 3vw;
 }
 
 header {
@@ -53,9 +104,9 @@ header {
     height: 18em;
 }
 
-#gaugePart {
+/* #gaugePart {
     margin-top: 13em;
-}
+} */
 
 #gaugePart p {
     text-shadow: 0.1em 0.1em 0.2em #000000;
@@ -75,7 +126,6 @@ header {
     align-items: center;
     width: 300px;
     height: 40px;
-    margin: 35px;
     border-radius: 50px;
     border: solid #ffffff 5px;
     background: #E0C399;
@@ -103,13 +153,9 @@ float: left;
     float: left;
     }
 
-/* #progressArrows {
-    height: 25px;
-} */
-
 
 footer {
-    margin-top: 10em;
+    margin-top: 2em;
     background-color: #EAEAEA;
 }
 
@@ -123,7 +169,173 @@ footer {
 }
 
 
+/*Animation menu burger*/
+
+.toggle .line1 { /* Je souhaite que mon burger se transforme en croix, apès ouverture et avant fermeture pour indiquer qu'on peut le fermer */
+    transform: rotate(-45deg) translate(-5px,6px);
+    border-radius: 50%;
+}
+.toggle .line2 {
+    opacity: 0; /* On ne doit pas voir la deuxième ligne */
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+/*Fin animation menu burger*/
+
+/*Partie exp*/
+
+.timeline-area1 {
+    margin: 90px auto;
+    width: 700px;
+    height: 1600px;
+    border-left: 8px solid #ffffff; /*Ma ligne est en fait la bordure gauche de mon conteneur principal*/
+    padding: 0 20px 0 30px;
+    color: #ffffff;
+    text-shadow: 0.1em 0.1em 0.2em #000000;
+  }
+  
+  .bloc1 {
+    padding: 50px 25px;
+    font-size: 10px;
+    line-height: 1.7em;
+    position: relative;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  
+   .bloc1:before {
+    content: ''; /*Le contenu du point*/
+    display: block; 
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; 
+    background-color: #ffffff;
+    position: absolute; /*Le point est par-dessus la ligne*/
+    top: 70px; /*Déplace le point*/
+    left: -49px;
+    box-shadow: 0em 0.2em 0.4em #000000;
+  }
+  
+  .bloc1 h2 {
+    margin-top: 0;
+  }
+  
+  .bloc1 h3 {
+    margin: 0;
+  }
+  
+  .bloc1 h4 {
+    margin: 0;
+  }
+
+  /*Partie Formation*/
+
+  
+
+.timeline-area2 {
+    margin: 90px auto;
+    width: 700px;
+    height: 1000px;
+    border-left: 8px solid #ffffff; /*Ma ligne est en fait la bordure gauche de mon conteneur principal*/
+    padding: 0 20px 0 30px;
+    color: #ffffff;
+    text-shadow: 0.1em 0.1em 0.2em #000000;
+  }
+  
+  .bloc2 {
+    padding: 50px 25px;
+    font-size: 10px;
+    line-height: 1.7em;
+    position: relative;
+    height: 300px;
+    margin-bottom: 30px;
+  }
+  
+   .bloc2:before {
+    content: ''; /*Le contenu du point*/
+    display: block; 
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; 
+    background-color: #ffffff;
+    position: absolute; /*Le point est par-dessus la ligne*/
+    top: 70px; /*Déplace le point*/
+    left: -49px;
+    box-shadow: 0em 0.2em 0.4em #000000;
+  }
+  
+  .bloc2 h2 {
+    margin-top: 0;
+  }
+  
+  .bloc2 h3 {
+    margin: 0;
+  }
+  
+  .bloc2 h4 {
+    margin: 0;
+  }
+
+  /*Partie CV*/
 
 
+  /*Partie Contact*/
 
+  
+#pageContactMe {
+    align-items: center;
+    text-shadow: 0.1em 0.1em 0.2em #000000;
+}
+
+#BgLeaf {
+    background-image: url(../IMG/leaf.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    box-shadow: -0.5em 0.4em 0.7em #000000;
+}
+
+.linkMail {
+    text-decoration: none;
+    color: #cccccc;
+}
+
+
+@media screen and (max-width:1024px) {
+    .nav-links {
+        width: 75%; /* L'écartement entre mes liens ne me plaisait pas lorsque je réduisais ma fenêtre. C'est pourquoi j'élargie mon nav-links après avoir franchi le seuil des 1024px. Sur un écran type tablette j'aurai un écartement toujours aussi esthétique. */ 
+    }
+}
+
+@media screen and (max-width:768px) {
+    body {
+        overflow-x: hidden; /* Empêche le scroll horizontal. Si besoin de voir ce qu'il se passe de l'autre côté, F12 sur le navigateur, ou je pourrai scroller. */
+    }
+    .nav-links {
+        position: absolute; /* Sauf erreur de ma part, le menu issu du menu burger sera indépendant de la taille de son conteneur. Ainsi, right:0px s'applique par rapport à l'écran et non son conteneur. Les height, top, right s'appliquent non plus en fonction du conteneur mais bien de l'écran. */
+        right: 0px; /* Le menu sera situé à la droite de l'écran */
+        height: 95vh;
+        top: 7vh;
+        background-color: #000000; /* en mettant le background, je m'aperçois que la largeur que prendra mon menu vertical sera 75% comme indiqué plus haut dans la première media screen. */
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        width: 50%; /* J'ai modifié la largeur de mon menu */
+        transform: translate(100%); 
+        /* Le menu est complètement sorti de l'écran. Scroller à droite pour le voir. transform translate décale l'élément. Ceci dans le but de préparer une animation. */
+        transition: transform 0.5s ease-in; /* mon animation agit sur transforme*/
+    }
+    .nav-links li a{
+        color: #ffffff;
+    }
+    .burger {
+        display: block; /* On passe de display none à block. Le fait de faire apparaitre le menu burger m'a décalée mon logo, il va falloir remédier à cela. */
+    }
+
+.nav-active { /* .nav-active a été inventé pour le JS */
+    transform: translateX(0%);
+}
 
