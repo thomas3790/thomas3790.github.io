@@ -24,6 +24,7 @@ nav {
 }
 .nav-links li a {
     color: #000000;
+    font-size: 1.2em;
     text-decoration: none;
 }
 .nav-links {
@@ -339,3 +340,49 @@ footer {
     transform: translateX(0%);
 }
 
+@media screen and (max-width:520px) {
+    #introduction {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .pictureThomas {
+        width: 14em;
+        height: 14em;
+    }
+    #skillPart {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    #sliderPart {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .bloc1 {
+        width: 100vw;
+        height: 300px auto;
+        padding-right: 20%;
+    }
+    .bloc1 h4, h3 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+    .timeline-area1 {
+        margin-left: 10%;
+    }
+    .bloc2 {
+        width: 100vw;
+        height: 300px auto;
+        padding-right: 20%;
+    }
+    .bloc2 h4, h3 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+    .timeline-area2 {
+        margin-left: 10%;
+    }
+    #contactPart p {
+        font-size: 0.7em;
+    }
+}
