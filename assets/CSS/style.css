@@ -156,7 +156,6 @@ float: left;
 
 
 footer {
-    margin-top: 2em;
     background-color: #EAEAEA;
 }
 
@@ -291,6 +290,8 @@ footer {
 }
 
 #BgLeaf {
+    position: relative; 
+    z-index: -1;
     background-image: url(../IMG/leaf.jpg);
     background-size: cover;
     background-position: center;
@@ -308,6 +309,9 @@ footer {
 @media screen and (max-width:1024px) {
     .nav-links {
         width: 75%; /* L'écartement entre mes liens ne me plaisait pas lorsque je réduisais ma fenêtre. C'est pourquoi j'élargie mon nav-links après avoir franchi le seuil des 1024px. Sur un écran type tablette j'aurai un écartement toujours aussi esthétique. */ 
+    }
+    h1 {
+        font-size: 5vw;
     }
 }
 
@@ -335,10 +339,27 @@ footer {
     .burger {
         display: block; /* On passe de display none à block. Le fait de faire apparaitre le menu burger m'a décalée mon logo, il va falloir remédier à cela. */
     }
-
-.nav-active { /* .nav-active a été inventé pour le JS */
-    transform: translateX(0%);
-}
+    .nav-active { /* .nav-active a été inventé pour le JS */
+        transform: translateX(0%);
+    }
+    .progressBar {
+        width: 250px;
+        height: 30px;
+        border: solid #ffffff 3px;
+    }
+    
+    .progressGood {
+    height: 24px;
+    }
+    
+    .progressBof {
+        height: 24px;
+    }
+    
+    .progress {
+        height: 24px;
+    }  
+} 
 
 @media screen and (max-width:520px) {
     #introduction {
