@@ -6,10 +6,12 @@ nav {
     display: flex; /* Les liens seront disposés à l'horizontal */
     justify-content: space-around;
     align-items: center;
-    min-height: 7vh; /* A vérifier, ma hauteur ne pourra pas baisser en dessous de 8vh */
+    min-height: 7vh; /* A vérifier, ma hauteur ne pourra pas baisser en dessous de 7vh */
     background-color: #ffffff;
-    position: relative; /*Pour faire fonctionner le z-index*/
-    z-index: 10; /*Pour faire passer au premier plan mon menu déroulant*/
+    position: fixed; /*Pour faire fonctionner le z-index*/
+    top: 0;
+    width: 100%;
+    z-index: 5; /*Pour faire passer au premier plan mon menu déroulant*/
 }
 
 .logo a {
@@ -55,6 +57,12 @@ body {
     font-family: Gotham, Metropolis, Futura, iCiel, sans-serif;
 }
 
+#anchor {
+    position: absolute;
+    top: 107%;
+    left: 50%;
+}
+
 /* p, h1, h2, h3, h4, h5, h6, hr {
     text-shadow: 0.1em 0.1em 0.2em #000000;
 } */
@@ -67,7 +75,7 @@ header {
     background-image: url(../IMG/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 95vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,6 +84,7 @@ header {
     font-size: 1.6em;
     box-shadow: 0em 0.3em 0.7em #000000;
     margin-bottom: 5em;
+
 }
 
 .hr1 {
@@ -91,13 +100,55 @@ header {
     background-color: #ffffff;
     width: 5em;
     margin-top: 1.5em;
+}
 
+#skillPart .row {
+    font-size: 1.4em;
+}
+
+/* Séparateur vague vers le bas */
+
+.separation {
+    position: relative;
+    background-color: #e3cdc5;
+}
+
+#shape-fill01 {
+    fill: #1C323A;
+}
+
+/* Séparateur vague vers le haut */
+
+.custom-shape-divider-bottom-1610907985 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1610907985 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 75px;
+}
+
+#shape-fill02 {
+    fill: #E3CDC5;
+}
+
+#skillPart .hr2 {
+    background-color: #343A40;
 }
 
 #explore {
     width: 7em;
     height: 3em;
     box-shadow: 0em 0em 0.5em #ffffff;
+    scroll-behavior: smooth;
 }
 
 .pictureThomas {
@@ -105,58 +156,23 @@ header {
     height: 18em;
 }
 
-/* #gaugePart {
-    margin-top: 13em;
-} */
-
-#gaugePart p {
-    text-shadow: 0.1em 0.1em 0.2em #000000;
-}
-
-#gaugePart > .container-fluid > .row {
-    margin-top: 8em;
-}
-
 .container {
     text-align: center;
     margin-top: 6em;
 }
 
-.progressBar {
-    display: inline-block;
-    align-items: center;
-    width: 300px;
-    height: 40px;
-    border-radius: 50px;
-    border: solid #ffffff 5px;
-    background: #E0C399;
-    /* box-shadow: 0em 0em 0.2em #ffffff; */
+#skillPart {
+    background-color: #e3cdc5;
 }
 
-.progressGood {
-height: 30px;
-border-radius: 50px;
-background:#C4FD3F;
-float: left;
+.skill-icon {
+    width: 40%;
+    height: auto;
 }
-
-.progressBof {
-    height: 30px;
-    border-radius: 50px;
-    background: #D4FF70;
-    float: left;
-}
-
-.progress {
-    height: 30px;
-    border-radius: 50px;
-    background:#E6FFAA;
-    float: left;
-    }
-
 
 footer {
     background-color: #EAEAEA;
+    width: 100%;
 }
 
 .iconSocialMedia {
@@ -167,7 +183,6 @@ footer {
 #carouselPortfolio {
     width: 70vw;
 }
-
 
 /*Animation menu burger*/
 
@@ -181,7 +196,6 @@ footer {
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px,-6px);
 }
-
 /*Fin animation menu burger*/
 
 /*Partie exp*/
@@ -359,6 +373,10 @@ footer {
     .progress {
         height: 24px;
     }  
+
+    .skill-icon {
+        width: 70%;
+    }
 } 
 
 @media screen and (max-width:520px) {
@@ -405,5 +423,8 @@ footer {
     }
     #contactPart p {
         font-size: 0.7em;
+    }
+    .skill-icon {
+        width: 100%;
     }
 }

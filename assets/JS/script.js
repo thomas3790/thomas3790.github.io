@@ -15,4 +15,3 @@ var navSlide = ()=>{ //Ma var stock la valeur d'une fonction anonyme
 }
 
 navSlide();
-
