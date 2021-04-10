@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Gotham';
+    src: url(../Fonts/Gotham-Black.otf);
+    src: url(../Fonts/Gotham-Bold.otf);
+}
+
 /*Partie Accueil*/
 nav {
     margin: 0px;
@@ -33,11 +39,12 @@ nav {
 .nav-links {
     display: flex;
     justify-content: space-around;
-    width: 60%; /* Pour trouver la bonne largeur, appliquer d'abord un justify-content et un background-color pour estimer la largeur du bloc ul */
+    width: 50%; /* Pour trouver la bonne largeur, appliquer d'abord un justify-content et un background-color pour estimer la largeur du bloc ul */
     color: #eeeeee;
     letter-spacing: 3px;
     font-weight: bold;
     font-size: 15px;
+    padding: 0;
 }
 
 .burger {
@@ -60,13 +67,9 @@ body {
 
 #anchor {
     position: absolute;
-    top: 107%;
+    top: 103%;
     left: 50%;
 }
-
-/* p, h1, h2, h3, h4, h5, h6, hr {
-    text-shadow: 0.1em 0.1em 0.2em #000000;
-} */
 
 header {
     background-image: url(../IMG/bg.jpg);
@@ -79,22 +82,94 @@ header {
     align-items: center;
     color: #ffffffee;
     box-shadow: 0em 0.3em 0.7em #000000;
-    margin-bottom: 2em;
-    font-size: 3vw;
+    margin-bottom: 80px;
+}
+html {
+    --res: calc(0.01*10vmin);
+    /* Je déclare une variable --res où vmin correspond à partie de l'écran la plus petite (hauteur en grand écran, largeur en petit écran) */
 }
 header > p {
-    max-width: 1920px;
-    width: 90%;
+    width: 80%;
+    font-size: calc(54 * var(--res));
+    /* J'utilise ma variable comme unité.*/
 }
-#explore {
+header > p > span {
+    position: relative;
+}
+.cta {
     padding-right: 5vw;
     padding-left: 5vw;
     border-radius: 10px;
-    font-size: 0.5em;
+    font-size: calc(40 * var(--res));
     box-shadow: 0em 0em 0.5em #ffffff;
     scroll-behavior: smooth;
 }
 
+/*Page Accueil*/
+.medias {
+    list-style-type: none;
+    position: absolute;
+    right: 3.3%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*Page Expérience*/
+.contactMediasXp {
+    list-style-type: none;
+    position: fixed;
+    right: 3.3%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+}
+/*Page Formation*/
+.contactMediasSchool {
+    list-style-type: none;
+    position: fixed;
+    right: 3.3%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+}
+/*Page CV*/
+.contactMediasCv {
+    list-style-type: none;
+    position: fixed;
+    right: 3.3%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+}
+.bulle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    background: #f1f1f1;
+    cursor: pointer;
+    position: relative;
+}
 .hr1 {
     border: 2px solid;
     background-color: #ffffff;
@@ -102,20 +177,25 @@ header > p {
     margin-top: 2em;
     margin-bottom: 2em;
 }
-
+.important {
+    font-size: calc(60 * var(--res));
+    text-transform: uppercase;
+}
+.intro {
+    font-size: calc(32 * var(--res));
+}
 .hr2 {
     border: 2px solid;
     background-color: #ffffff;
     width: 5em;
     margin-top: 1.5em;
 }
-
-#skillPart .row {
-    font-size: 1.4em;
+#skillPart {
+    background-color: #e3d7c5;
+    font-size: calc(37 * var(--res));
 }
 
 /* Séparateur vague vers le bas */
-
 .separation {
     position: relative;
     background-color: #e3d7c5;
@@ -161,11 +241,6 @@ header > p {
     text-align: center;
     margin-top: 6em;
 }
-
-#skillPart {
-    background-color: #e3d7c5;
-}
-
 .skill-icon {
     width: 40%;
     height: auto;
@@ -175,12 +250,6 @@ footer {
     background-color: #EAEAEA;
     width: 100%;
 }
-
-.iconSocialMedia {
-    width: 3em;
-    height: 3em;
-}
-
 #carouselPortfolio {
     width: 70vw;
 }
@@ -200,10 +269,14 @@ footer {
 /*Fin animation menu burger*/
 
 /*Partie exp*/
-
+.sectionContainer {
+    display: flex;
+    justify-content: flex-end;
+}
 .timeline-area1 {
-    margin: 90px auto;
-    width: 700px;
+    margin: 90px 0px 110px 0px;
+    max-width: 100vw;
+    width: 80%;
     height: 1850px;
     border-left: 8px solid #ffffff; /*Ma ligne est en fait la bordure gauche de mon conteneur principal*/
     padding: 0 20px 0 30px;
@@ -212,7 +285,7 @@ footer {
   }
   
   .bloc1 {
-    padding: 50px 25px;
+    padding: 50px 0px 25px 25px;
     font-size: 10px;
     line-height: 1.7em;
     position: relative;
@@ -233,25 +306,18 @@ footer {
     box-shadow: 0em 0.2em 0.4em #000000;
   }
   
-  .bloc1 h2 {
+  .bloc1 p {
+    font-size: calc(35 * var(--res));
+    font-weight: 700;
     margin-top: 0;
-  }
-  
-  .bloc1 h3 {
-    margin: 0;
-  }
-  
-  .bloc1 h4 {
-    margin: 0;
   }
 
   /*Partie Formation*/
 
-  
-
 .timeline-area2 {
-    margin: 90px auto;
-    width: 700px;
+    margin: 90px 0px 110px 0px;
+    max-width: 100vw;
+    width: 80%;
     height: 1000px;
     border-left: 8px solid #ffffff; /*Ma ligne est en fait la bordure gauche de mon conteneur principal*/
     padding: 0 20px 0 30px;
@@ -262,7 +328,7 @@ footer {
   .bloc2 {
     padding: 50px 25px;
     font-size: 10px;
-    line-height: 1.7em;
+    line-height: 3.1em;
     position: relative;
     height: 300px;
     margin-bottom: 30px;
@@ -281,16 +347,10 @@ footer {
     box-shadow: 0em 0.2em 0.4em #000000;
   }
   
-  .bloc2 h2 {
+  .bloc2 p {
+    font-size: calc(35 * var(--res));
+    font-weight: 700;
     margin-top: 0;
-  }
-  
-  .bloc2 h3 {
-    margin: 0;
-  }
-  
-  .bloc2 h4 {
-    margin: 0;
   }
 
   /*Partie CV*/
@@ -327,29 +387,7 @@ footer {
     background: rgb(106,106,106);
     background: linear-gradient(49deg, rgba(106,106,106,1) 0%, rgba(45,44,44,1) 100%);
 }
-  /*Partie Contact*/
 
-  
-#pageContactMe {
-    align-items: center;
-    text-shadow: 0.1em 0.1em 0.2em #000000;
-}
-
-#BgLeaf {
-    position: relative; 
-    z-index: -1;
-    background-image: url(../IMG/leaf.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    box-shadow: -0.5em 0.4em 0.7em #000000;
-}
-
-.linkMail {
-    text-decoration: none;
-    color: #cccccc;
-}
 
 @media screen and (max-width:1200px) {
     .downloadBtns {
@@ -384,10 +422,36 @@ footer {
     .nav-active { /* .nav-active a été inventé pour le JS */
         transform: translateX(0%);
     }
+    .sectionContainer {
+        justify-content: center;
+    }
+    
 }
 
 @media screen and (max-width:768px) {
-
+    .medias {
+        position: relative;
+        top: 25%;
+        flex-direction: row;
+    }
+    .contactMediasXp {
+        position: relative;
+        top: 2070px;
+        flex-direction: row;
+    }
+    .contactMediasSchool {
+        position: relative;
+        top: 1200px;
+        flex-direction: row;
+    }
+    .contactMediasCv {
+        position: relative;
+        top: 820px;
+        flex-direction: row;
+    }
+    .bulle {
+        margin: 0px 15px;
+    }  
     .skill-icon {
         width: 70%;
     }
@@ -401,54 +465,15 @@ footer {
         font-size: 0.8em;
     }
     .greyBtn {
+        margin-bottom: 60px;
         font-size: 0.8em;
     }
 } 
 
 @media screen and (max-width:520px) {
-    #introduction {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
     .pictureThomas {
         width: 14em;
         height: 14em;
-    }
-    #skillPart {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-    #sliderPart {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-
-    .bloc1 {
-        width: 100vw;
-        height: 300px auto;
-        padding-right: 20%;
-    }
-    .bloc1 h4, h3 {
-        font-size: 1.5em;
-        text-align: center;
-    }
-    .timeline-area1 {
-        margin-left: 10%;
-    }
-    .bloc2 {
-        width: 100vw;
-        height: 300px auto;
-        padding-right: 20%;
-    }
-    .bloc2 h4, h3 {
-        font-size: 1.5em;
-        text-align: center;
-    }
-    .timeline-area2 {
-        margin-left: 10%;
-    }
-    #contactPart p {
-        font-size: 0.7em;
     }
     .skill-icon {
         width: 100%;
