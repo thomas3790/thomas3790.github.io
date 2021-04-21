@@ -181,6 +181,9 @@ header > p > span {
     font-size: calc(60 * var(--res));
     text-transform: uppercase;
 }
+.portfolioLink:hover {
+    text-decoration: none;
+}
 .intro {
     font-size: calc(32 * var(--res));
 }
